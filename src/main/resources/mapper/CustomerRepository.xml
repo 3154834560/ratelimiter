@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.demo.domain.repository.CustomerRepository">
+    <select id="getById" resultType="com.example.demo.domain.model.Customer" resultMap="customer">
+        select *
+        from customer
+        where (id = #{id} and delete_flag = false);
+    </select>
+
+    <resultMap id="customer" type="com.example.demo.domain.model.Customer"
+               extends="com.example.demo.domain.repository.BaseEntityRepository.baseEntity">
+        <result property="name" column="name"/>
+        <result property="password" column="password"/>
+        <result property="sex" column="sex"/>
+        <result property="phone" column="phone"/>
+        <result property="email" column="email"/>
+        <result property="headPortraitName" column="head_portrait_name"/>
+        <result property="creditScore" column="credit_score"/>
+        <result property="typeId" column="type_id"/>
+    </resultMap>
+</mapper>

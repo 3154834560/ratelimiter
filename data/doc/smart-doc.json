@@ -1,0 +1,14 @@
+{
+  "outPath": "./src/main/resources/static/doc",
+  "allInOne": true,
+  "allInOneDocFileName":"index.html",
+  "packageFilters": "com.example.demo.api",
+  "coverOld": true,
+  "projectName": "转账",
+  "isStrict": false,
+  "openUrl": "http://127.0.0.1:7700/api",
+  "appToken": "667e79b7da6942288ebf1003793b8736",
+  "debugEnvName":"测试环境",
+  "debugEnvUrl":"http://127.0.0.1:8099",
+  "replace": true
+}
